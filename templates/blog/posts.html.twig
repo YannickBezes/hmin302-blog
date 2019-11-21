@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <ul>
+    {% for p in posts %}
+        <li class="post_list_item"> 
+            <h1> {{ p.title }} </h1>
+            <p> {{ p.content }} </p>        
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

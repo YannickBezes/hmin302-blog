@@ -1,3 +1,9 @@
-body {
-    background-color: #202020;
+/* body {
+    background-color: white !important;
+    color: red;
+} */
+
+.post_list_item{
+    background-color: #fff;
+    text: black;
 }

@@ -12,8 +12,18 @@ class BlogController extends AbstractController
      */
     public function index()
     {
-        return $this->render('blog/index.html.twig', [
-            'controller_name' => 'BlogController',
+        $em = $this->getDoctrine()->getEntityManager();
+        $query = $em->createQuery('select p from App:Post p order by p.Date')->setMaxResults(10);
+
+        $Posts = $query->getResult();
+
+        if(!$Posts)
+        {
+            throw $this->createNotFoundException('Aucun post trouvé !');
+        }
+
+        return $this->render('blog/posts.html.twig', [
+            'posts' => $Posts,
         ]);
     }
 
@@ -21,8 +31,17 @@ class BlogController extends AbstractController
      * @Route("/post/{idPost}", name="post_details", requirements={"idPost"="\d+" })
      */
     public function edit(int $idPost) {
+        $Post = $this->getDoctrine()
+            ->getRepository('App:Post')
+            ->find($idPost);
+
+        if(!$Post)
+        {
+            throw $this->createNotFoundException('Aucun post trouvé avec l\'id '.$idPost);
+        }
+
         return $this->render('blog/post_details.html.twig', [
-            'id_post' => $idPost,
+            'id_post' => $Post,
         ]);
     }
 }
