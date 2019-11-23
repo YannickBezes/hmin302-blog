@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>POST : {{ id_post.id }}</h1>
+    <article>
+        <header> 
+            <h5> {{ id_post.title }} </h5>
+        </header>
+        <p>
+             {{ id_post.content }}
+        </p>
+    </article>
+{% endblock %}
