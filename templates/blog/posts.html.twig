@@ -3,9 +3,10 @@
 {% block body %}
     <ul>
     {% for p in posts %}
-        <li class="post_list_item"> 
-            <h1> {{ p.title }} </h1>
-            <p> {{ p.content }} </p>        
+        <li class="posts_list_item"> 
+            <h2 class="posts_list_item_title"> {{ p.title }} </h2>
+            <p class="posts_list_item_creation"> Posté par {{ p.author }} le {{ p.date|date("m/d/Y")  }}</p>
+            <p class="posts_list_item_content"> {{ p.content }} </p>    
         </li>
     {% endfor %}
     </ul>
