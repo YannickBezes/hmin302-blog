@@ -1,0 +1,9 @@
+body {
+    background-color: grey;
+    color: red;
+}
+
+.post_list_item{
+    background-color: #fff;
+    color: blue;
+}
