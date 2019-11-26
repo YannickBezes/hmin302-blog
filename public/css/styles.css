@@ -1,0 +1,75 @@
+body {
+    background-color: grey;
+    color: red;
+}
+
+/* Base html */
+
+.main_header{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    background-color: dodgerblue;
+    color: darkblue;
+}
+
+.main_title{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    font-size: 40px;
+    border: 2px solid darkblue;
+}
+
+.main_footer{
+    display: flex;
+    background-color: dodgerblue;
+    padding: 5px;
+}
+
+.footer_authors{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: antiquewhite;
+    font-size: 15px;
+}
+
+/* Posts html */
+
+ul li {
+    list-style-type: none;
+}
+
+.posts_list_item{
+    background-color: antiquewhite;
+    color: darkblue;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.posts_list_item_title{
+    margin-left: 80px;
+    padding-top: 15px;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.posts_list_item_content{
+    padding: 15px;
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.posts_list_item_creation{
+    margin-left: 80px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+/* Post_details html */
